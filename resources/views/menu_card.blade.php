@@ -31,7 +31,7 @@
                                     <label class="text-lx font-serif">所要時間:</label>
                                     <p  class="inline-block ml-2 outline-none py-1 px-2 text-md rounded-md">{{$practice['time_requ']}}</p>
                                 </div>
-                                <form method="post" action="{{ route('store_card',['id'=>$practice['menu_id']]) }}">
+                                <form method="get" action="{{ route('store_card',['id'=>$practice['menu_id']]) }}">
                                     @csrf      
                                     <button class="  px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  " >お気に入りに追加</button>
                                 </form>    
