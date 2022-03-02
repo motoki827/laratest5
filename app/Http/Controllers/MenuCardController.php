@@ -34,7 +34,7 @@ class MenuCardController extends Controller
         $user = \Auth::user();
         $favorite_menu =FavoriteMenu::select('menu_id')->get()->toArray();
         $practice = PracticeMenu::where('menu_id',$id)->get()->toArray();
-        //dd($favorite_menu);
+        //dd($id);
         //POSTされたデータをDB（practice_menusテーブル）に挿入
         //FavoriteMenuモデルにDBへ保存する命令を出す
             if(!in_array($id,$favorite_menu,true)){
