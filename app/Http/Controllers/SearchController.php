@@ -8,7 +8,13 @@ use App\Models\PracticeMenu;
 class SearchController extends Controller
 {
     //
-    public function search(Request $req)
+    public function search()
+    {
+        return view('search');
+    }
+
+
+    public function search_result(Request $req)
     {
  
                 //値を取得
@@ -19,31 +25,31 @@ class SearchController extends Controller
                 $query = PracticeMenu::query();
                 
                 //結合
-                $query->join('depts', function ($query) use ($req) {
-                $query->on('employees.dept_id', '=', 'depts.id');
-                });
+                // $query->join('depts', function ($query) use ($req) {
+                // $query->on('employees.dept_id', '=', 'depts.id');
+                // });
                 
                 // もし「部署名」があれば
-                if(!empty($dept_name)){
-                $query->where('dept_name','like','%'.$dept_name.'%');
+                if(!empty($menu_name)){
+                $query->where('pra_name','like','%'.$menu_name.'%');
                 }
                 
                 // もし「都道府県」があれば
-                if(!empty($pref)){
-                $query->where('address','like','%'.$pref.'%');
+                if(!empty($genre)){
+                $query->where('genre','like','%'.$genre.'%');
                 }
                 
                 // ページネーション
-                $employees = $query->paginate(5);
+                $menus = $query->paginate(5);
                 
                 // ビューへ渡す値を配列に格納
-                $hash = array(
-                'dept_name' => $dept_name, //pass parameter to pager
-                'pref' => $pref, //pass parameter to pager
-                'employees' => $employees, //Eloquent
+                $hashs = array(
+                'menu_name' => $menu_name, //pass parameter to pager
+                'genre' => $genre, //pass parameter to pager
+                'practice_menus' => $menus, //Eloquent
                 );
-                
-                return view('search')->with($hash);
+
+                return view('search_result',compact('hashs'));
             
 
     } 

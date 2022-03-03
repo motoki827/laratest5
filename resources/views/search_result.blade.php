@@ -12,12 +12,12 @@
                    <!-- Creacte By Joker Banny -->
                     <div class=" bg-gray-100 flex justify-center">
                         <div class="container mx-auto bg-gray-500 rounded-lg p-14">
-                            <form action="/search_result" method="post">
+                            <form action="" method="">
                                 @csrf
                                 <h1 class="text-center font-bold text-white text-4xl">練習メニュー検索</label>
                                     <p class="mx-auto font-normal text-sm my-6 max-w-lg">コメント</p>
                                     <div class="sm:flex items-center bg-white rounded-lg overflow-hidden px-2 py-1 justify-between">
-                                        <input name="menu_name" class="text-base text-gray-400 flex-grow outline-none px-2 " type="text" placeholder="練習メニュー" />
+                                        <input class="text-base text-gray-400 flex-grow outline-none px-2 " type="text" placeholder="練習メニュー" />
                                         <div class="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto ">
                                             <select id="Com" class="text-base text-gray-800 outline-none border-2 px-8 py-2 rounded-lg">
                                                 <option value="com"></option>
@@ -28,6 +28,12 @@
                                             <button class="bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">検索</button>
                                         </div>
                                     </div>
+                                    <ul>
+                                        {{dd($hashs)}}
+                                        @foreach($hashs as $hash)
+                                        <li>{{$hash->menu_name}}</li>
+                                        @endforeach
+                                    </ul>
                             </form>
                         </div>
                     </div>
