@@ -29,9 +29,10 @@
                                         </div>
                                     </div>
                                     <ul>
-                                        {{dd($hashs)}}
+                                     {{var_dump($hashs)}}  
+                                    <!-- {{dd($hashs['practice_menus'])}} -->
                                         @foreach($hashs as $hash)
-                                        <li>{{$hash->menu_name}}</li>
+                                        <li>{{$hash->practice_menus->pra_name}}</li>
                                         @endforeach
                                     </ul>
                             </form>
