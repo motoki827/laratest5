@@ -14,7 +14,7 @@
                         <div class="container mx-auto bg-gray-500 rounded-lg p-14">
                             <form action="" method="">
                                 @csrf
-                                <h1 class="text-center font-bold text-white text-4xl">練習メニュー検索</label>
+                                <h1 class="text-center font-bold text-white text-4xl">練習メニュー検索</h1>
                                     <p class="mx-auto font-normal text-sm my-6 max-w-lg">コメント</p>
                                     <div class="sm:flex items-center bg-white rounded-lg overflow-hidden px-2 py-1 justify-between">
                                         <input class="text-base text-gray-400 flex-grow outline-none px-2 " type="text" placeholder="練習メニュー" />
@@ -28,16 +28,17 @@
                                             <button class="bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">検索</button>
                                         </div>
                                     </div>
-                                    <ul>
-                                     {{var_dump($hashs)}}  
-                                    <!-- {{dd($hashs['practice_menus'])}} -->
-                                        @foreach($hashs as $hash)
-                                        <li>{{$hash->practice_menus->pra_name}}</li>
-                                        @endforeach
-                                    </ul>
-                            </form>
+                                    
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                        <ul>
+                           
+
+                            {{($posts[0]['pra_name'])}} 
+                         
+                            
+                        </ul>
                 </div>
             </div>
         </div>
