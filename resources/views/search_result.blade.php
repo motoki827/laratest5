@@ -33,11 +33,9 @@
                             </div>
                         </div>
                         <ul>
-                           
-
-                            {{($posts[0]['pra_name'])}} 
-                         
-                            
+                           @foreach($posts as $post)
+                            <li><a href="/menu_card/{{$post['menu_id']}}">{{$post['pra_name']}}</a></li>
+                           @endforeach 
                         </ul>
                 </div>
             </div>
