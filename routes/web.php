@@ -24,6 +24,7 @@ Route::get('/search', [App\Http\Controllers\SearchController::class, 'search'])-
 Route::get('/edit/{id}', [App\Http\Controllers\PracticeMenuController::class, 'edit'])->name('edit');
 Route::get('/menu_card/{id}', [App\Http\Controllers\MenuCardController::class, 'menu_card'])->name('menu_card');
 Route::get('/favorite_menu_card/{id}', [App\Http\Controllers\MenuCardController::class, 'favorite_menu_card'])->name('favorite_menu_card');
+Route::post('/favorite_delete/{id}', [App\Http\Controllers\MenuCardController::class, 'delete'])->name('favorite_delete');
 Route::get('/menu_card_edit/{id}', [App\Http\Controllers\MenuCardEditController::class, 'menu_card_edit'])->name('menu_card_edit');
 Route::post('/update/{id}', [App\Http\Controllers\PracticeMenuController::class, 'update'])->name('update');
 Route::post('/delete/{id}', [App\Http\Controllers\PracticeMenuController::class, 'delete'])->name('delete');

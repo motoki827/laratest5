@@ -34,7 +34,7 @@ class MenuCardController extends Controller
         $user = \Auth::user();
         $favorite_menu =FavoriteMenu::select('menu_id')->get()->toArray();
         $practice = PracticeMenu::where('menu_id',$id)->get()->toArray();
-        //dd($id);
+        //dd($favorite_menu);
         //POSTされたデータをDB（practice_menusテーブル）に挿入
         //FavoriteMenuモデルにDBへ保存する命令を出す
             if(!in_array($id,$favorite_menu,true)){
@@ -44,12 +44,16 @@ class MenuCardController extends Controller
                 'menu_name'=>$practice[0]["pra_name"]
                 ]); 
             };
-        //     if(!in_array('',))$favorite_menu = FavoriteMenu::insertGetId([
-        //     'user_id'=>$user['id'],
-        //     'menu_id'=>$id
-        // ]);
-        //\DB::table('favorite_menus')
         //リダイレクト処理
+        return redirect()->route('myPage');
+    }
+
+    public function delete(Request $request, $id)
+    {
+        //
+        FavoriteMenu::where('menu_id',$id)->update([
+            'status'=>'0'
+        ]);
         return redirect()->route('myPage');
     }
  }

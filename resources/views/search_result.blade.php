@@ -12,7 +12,7 @@
                    <!-- Creacte By Joker Banny -->
                     <div class=" bg-gray-100 flex justify-center">
                         <div class="container mx-auto bg-gray-500 rounded-lg p-14">
-                            <form action="" method="">
+                            <form action="/search_result" method="post">
                                 @csrf
                                 <h1 class="text-center font-bold text-white text-4xl">練習メニュー検索</h1>
                                     <p class="mx-auto font-normal text-sm my-6 max-w-lg">コメント</p>
