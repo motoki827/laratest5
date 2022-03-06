@@ -35,7 +35,8 @@
                                     @csrf      
                                     <button class="  px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  " >お気に入りに追加</button>
                                 </form>    
-                                    <button class="  px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  " >検索結果一覧へ戻る</button>
+                                <button onclick=history.back() class="px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  " >検索結果一覧へ戻る</button>
+                             
                             </div>
                         </div>
                     </div>

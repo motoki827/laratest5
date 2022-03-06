@@ -94,7 +94,7 @@
                                     <!-- Profile Card -->
                                     <div class="bg-white p-3 border-t-4 border-green-400">
                                         <div class="image overflow-hidden">
-                                            <img class="h-auto w-full mx-auto"
+                                            <img class="h-auto w-full mx-auto "
                                                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
                                                 alt="">
                                         </div>
@@ -114,18 +114,18 @@
                                             </li>
                                         </ul> -->
                                     </div>
-                                    <div class="w-screen h-screen bg-white flex flex-row flex-wrap p-3">
+                                    <!-- <div class="w-screen h-screen bg-white flex flex-row flex-wrap p-3">
                                         <div class="mx-auto w-2/3">
 
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- End of profile card -->
                                 </div>
                                 <!-- Right Side -->
-                                <div class="w-full md:w-9/12 mx-2 h-64">
+                                <div class="w-full md:w-9/12 mx-2 h-100">
                                     <!-- Profile tab -->
                                     <!-- About Section -->
-                                    <div class="bg-white p-3 shadow-sm rounded-sm">
+                                    <div class="bg-white p-3 shadow-sm rounded-sm mx-auto">
                                         <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
                                             <span clas="text-green-500">
                                                 <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
