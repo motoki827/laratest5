@@ -32,18 +32,20 @@ class MenuCardController extends Controller
     public function store_card(Request $request ,$id)
     {
         $user = \Auth::user();
-        $favorite_menu =FavoriteMenu::select('menu_id')->get()->toArray();
+        //↓ログインしているユーザーがお気に入りに登録しているメニュー
+        $favorite_menu =FavoriteMenu::select('menu_id')->where('user_id',$user['id'])->get()->toArray();
+        //↓表示されているメニューのメニューIＤ
         $practice = PracticeMenu::where('menu_id',$id)->get()->toArray();
+        //↓配列を展開して１次元にしている
         $favorite = array_column($favorite_menu,'menu_id');
-        //↑配列を展開して１次元にしている
-
         //$favoriteと$idは型が違う
+        //dd($user['id']);
 
         //dd($id);
         //dd($favorite);
         //POSTされたデータをDB（practice_menusテーブル）に挿入
-        //FavoriteMenuモデルにDBへ保存する命令を出す
-            if(!in_array($id,$favorite)){
+        //FavoriteMenuモデルにDBへ保存する命令を出す    
+        if(!in_array($id,$favorite)){
                 FavoriteMenu::insert([
                 'user_id'=>$user['id'],
                 'menu_id'=>$id,
