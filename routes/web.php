@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {return view('welcome');});
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/dashboard', function () {return view('dashboard');})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::get('/myPage', [App\Http\Controllers\MyPageController::class, 'myPage'])->name('myPage');
 Route::get('/create_menu', [App\Http\Controllers\PracticeMenuController::class, 'create'])->name('create_menu');
@@ -31,4 +35,4 @@ Route::post('/delete/{id}', [App\Http\Controllers\PracticeMenuController::class,
 Route::get('/store_card/{id}', [App\Http\Controllers\MenuCardController::class, 'store_card'])->name('store_card');
 Route::post('/search_result', [App\Http\Controllers\SearchController::class, 'search_result'])->name('search_result');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

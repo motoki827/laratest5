@@ -16,7 +16,7 @@ class PracticeMenuController extends Controller
     {
         //
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +26,7 @@ class PracticeMenuController extends Controller
     {
         //
         $user = \Auth::user();
-        return view('create_menu',compact('user'));
+        return view('create_menu', compact('user'));
     }
 
     /**
@@ -37,24 +37,24 @@ class PracticeMenuController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $data = $request->all();
         // dd($data);
         //POSTされたデータをDB（practice_menusテーブル）に挿入
         //PRACTICEMENUモデルにDBへ保存する命令を出す
         $practice_menu_id = PracticeMenu::insertGetId([
-            'contri_id'=>$data['contri_id'],
-            'pra_name'=>$data['title'],
-            'pra_content'=>$data['content'],
-            'pra_genre'=>$data['genre'],
-            'num_of_people'=>$data['people'],
-            'time_requ'=>$data['time']
+            'contri_id' => $data['contri_id'],
+            'pra_name' => $data['title'],
+            'pra_content' => $data['content'],
+            'pra_genre' => $data['genre'],
+            'num_of_people' => $data['people'],
+            'time_requ' => $data['time']
         ]);
 
         //リダイレクト処理
         return redirect()->route('myPage');
     }
-    
+
     /**
      * Display the specified resource.
      *
@@ -65,7 +65,7 @@ class PracticeMenuController extends Controller
     {
         //
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -76,13 +76,13 @@ class PracticeMenuController extends Controller
     {
         //該当するIDの練習をデータベースから取得
         $user = \Auth::user();
-        $practice = PracticeMenu::where('menu_id',$id)->where('contri_id',$user['id'])
-        ->first();
+        $practice = PracticeMenu::where('menu_id', $id)->where('contri_id', $user['id'])
+            ->first();
         //dd($practice);
-        
-        return view('edit',compact('user','practice'));
+
+        return view('edit', compact('user', 'practice'));
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
@@ -95,19 +95,17 @@ class PracticeMenuController extends Controller
         //
         $inputs = $request->all();
         //dd($inputs);
-        PracticeMenu::where('menu_id',$id)->update([
-            'pra_name'=>$inputs['title'],
-            'pra_content'=>$inputs['content'],
-            'pra_genre'=>$inputs['genre'],
-            'num_of_people'=>$inputs['people'],
-            'time_requ'=>$inputs['time']
+        PracticeMenu::where('menu_id', $id)->update([
+            'pra_name' => $inputs['title'],
+            'pra_content' => $inputs['content'],
+            'pra_genre' => $inputs['genre'],
+            'num_of_people' => $inputs['people'],
+            'time_requ' => $inputs['time']
         ]);
-        
+
         return redirect()->route('myPage');
-        
-        
     }
-    
+
     /**
      * Remove the specified resource from storage.
      *
@@ -117,8 +115,8 @@ class PracticeMenuController extends Controller
     public function delete(Request $request, $id)
     {
         //
-        PracticeMenu::where('menu_id',$id)->update([
-            'status'=>'0'
+        PracticeMenu::where('menu_id', $id)->update([
+            'status' => '0'
         ]);
         return redirect()->route('myPage');
     }
