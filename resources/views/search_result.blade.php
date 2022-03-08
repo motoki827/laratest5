@@ -21,9 +21,9 @@
                                     <div class="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto ">
                                         <select id="Com" class="text-base text-gray-800 outline-none border-2 px-8 py-2 rounded-lg">
                                             <option value="com"></option>
-                                            <option value="net">net</option>
-                                            <option value="org">org</option>
-                                            <option value="io">io</option>
+                                            <option value="net">パス</option>
+                                            <option value="org">スパイク</option>
+                                            <option value="io">レシーブ</option>
                                         </select>
                                         <button class="bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">検索</button>
                                     </div>

@@ -1021,14 +1021,8 @@ select {
 .self-center {
   align-self: center;
 }
-.overflow-auto {
-  overflow: auto;
-}
 .overflow-hidden {
   overflow: hidden;
-}
-.overflow-x-auto {
-  overflow-x: auto;
 }
 .whitespace-nowrap {
   white-space: nowrap;
@@ -1902,10 +1896,6 @@ select {
     margin-left: 1rem;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:inline {
     display: inline;
   }
@@ -1970,11 +1960,6 @@ select {
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   .md\:pb-0 {
