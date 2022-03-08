@@ -16,8 +16,8 @@ class SearchController extends Controller
     public function search_result(Request $request)
     {
         $inputs = $request->all();
-        //dd($inputs);
-        if(!empty($inputs['menu_name'])){
+       //d($inputs['genre']);
+        if(!empty($inputs['menu_name']) || !empty($inputs['genre'])){
         $posts = PracticeMenu::where('pra_name', 'like', '%' . $inputs['menu_name'] . '%')->get()->toArray();
         //dd($posts);
         return view('search_result', compact('posts'));
