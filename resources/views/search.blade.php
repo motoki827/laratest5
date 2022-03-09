@@ -24,6 +24,9 @@
                                                 <option value="パス">パス</option>
                                                 <option value="スパイク">スパイク</option>
                                                 <option value="レシーブ">レシーブ</option>
+                                                <option value="ゲーム">ゲーム</option>
+                                                <option value="トレーニング">トレーニング</option>
+                                                
                                             </select>
                                             <button class="bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">検索</button>
                                         </div>
