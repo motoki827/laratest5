@@ -150,13 +150,13 @@
                                                     </span>
                                                     <span class="tracking-wide">お気に入り</span>
                                                 </div>
-                                                <form action="" method="get" >
+                                                <form action="/create_today_menu" method="get" >
                                                     <ul class="list-inside space-y-2">
                                                         @foreach($favorite_menus as $favorite_menu)
                                                         <li>
                                                             <div class="text-teal-600">
                                                                 <a href="/favorite_menu_card/{{$favorite_menu['menu_id']}}">{{$favorite_menu['menu_name']}}</a>
-                                                                <input type="checkbox" name="select">
+                                                                <input type="checkbox" name="{{$favorite_menu['menu_name']}}" value="{{$favorite_menu}}">
                                                             </div>
                                                             <!-- <div class="text-gray-500 text-xs">{{$favorite_menu['updated_at']}}</div> -->
                                                         </li>
