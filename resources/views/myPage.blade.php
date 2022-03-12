@@ -78,24 +78,9 @@
                                         <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">{{$user['name']}}</h1>
                                         <h3 class="text-gray-600 font-lg text-semibold leading-6">コメント</h3>
                                         <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">コメント</p>
-                                        <!-- <ul
-                                            class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
-                                            <li class="flex items-center py-3">
-                                                <span>Status</span>
-                                                <span class="ml-auto"><span
-                                                        class="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
-                                            </li>
-                                            <li class="flex items-center py-3">
-                                                <span>Member since</span>
-                                                <span class="ml-auto">Nov 07, 2016</span>
-                                            </li>
-                                        </ul> -->
+  
                                     </div>
-                                    <!-- <div class="w-screen h-screen bg-white flex flex-row flex-wrap p-3">
-                                        <div class="mx-auto w-2/3">
-
-                                        </div>
-                                    </div> -->
+                            
                                     <!-- End of profile card -->
                                 </div>
                                 <!-- Right Side -->
@@ -165,14 +150,20 @@
                                                     </span>
                                                     <span class="tracking-wide">お気に入り</span>
                                                 </div>
-                                                <ul class="list-inside space-y-2">
-                                                    @foreach($favorite_menus as $favorite_menu)
-                                                    <li>
-                                                        <div class="text-teal-600"><a href="/favorite_menu_card/{{$favorite_menu['menu_id']}}">{{$favorite_menu['menu_name']}}</a></div>
-                                                        <!-- <div class="text-gray-500 text-xs">{{$favorite_menu['updated_at']}}</div> -->
-                                                    </li>
-                                                    @endforeach
-                                                </ul>
+                                                <form action="" method="get" >
+                                                    <ul class="list-inside space-y-2">
+                                                        @foreach($favorite_menus as $favorite_menu)
+                                                        <li>
+                                                            <div class="text-teal-600">
+                                                                <a href="/favorite_menu_card/{{$favorite_menu['menu_id']}}">{{$favorite_menu['menu_name']}}</a>
+                                                                <input type="checkbox" name="select">
+                                                            </div>
+                                                            <!-- <div class="text-gray-500 text-xs">{{$favorite_menu['updated_at']}}</div> -->
+                                                        </li>
+                                                        @endforeach
+                                                    </ul>
+                                                    <button class="my-4 bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">表を生成</button>
+                                                </form>
                                             </div>
                                         </div>
                                         <!-- End of Experience and education grid -->
