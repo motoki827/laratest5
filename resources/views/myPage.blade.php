@@ -156,7 +156,7 @@
                                                         <li>
                                                             <div class="text-teal-600">
                                                                 <a href="/favorite_menu_card/{{$favorite_menu['menu_id']}}">{{$favorite_menu['menu_name']}}</a>
-                                                                <input type="checkbox" name="{{$favorite_menu['menu_name']}}" value="{{$favorite_menu}}">
+                                                                <input type="checkbox" name="menu[]" value="{{$favorite_menu['menu_id']}}">
                                                             </div>
                                                             <!-- <div class="text-gray-500 text-xs">{{$favorite_menu['updated_at']}}</div> -->
                                                         </li>
