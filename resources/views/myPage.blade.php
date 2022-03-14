@@ -150,8 +150,9 @@
                                                     </span>
                                                     <span class="tracking-wide">お気に入り</span>
                                                 </div>
-                                                <form action="/create_today_menu" method="get" >
-                                                    <ul class="list-inside space-y-2">
+                                                <form action="/create_today_menu" method="post" >
+                                                @csrf    
+                                                     <ul class="list-inside space-y-2">
                                                         @foreach($favorite_menus as $favorite_menu)
                                                         <li>
                                                             <div class="text-teal-600">

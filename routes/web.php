@@ -34,6 +34,6 @@ Route::post('/update/{id}', [App\Http\Controllers\PracticeMenuController::class,
 Route::post('/delete/{id}', [App\Http\Controllers\PracticeMenuController::class, 'delete'])->name('delete');
 Route::get('/store_card/{id}', [App\Http\Controllers\MenuCardController::class, 'store_card'])->name('store_card');
 Route::post('/search_result', [App\Http\Controllers\SearchController::class, 'search_result'])->name('search_result');
-Route::get('/create_today_menu', [App\Http\Controllers\CreateTodayMenuController::class, 'create_today_menu'])->name('create_today_menu');
+Route::post('/create_today_menu', [App\Http\Controllers\CreateTodayMenuController::class, 'create_today_menu'])->name('create_today_menu');
 
 require __DIR__ . '/auth.php';
