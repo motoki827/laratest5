@@ -28,7 +28,7 @@
                                     <p class="mx-auto font-normal text-sm my-6 max-w-lg">ジャンル検索</p>
                                     <div class="sm:flex items-center  rounded-lg overflow-hidden px-2 py-1 justify-between">
                                         <div class="bg-white ms:flex items-center px-2 py-1 rounded-lg space-x-4 mx-auto ">
-                                            <select name="genre" class="text-base text-gray-800 outline-none border-2 px-8 py-2 rounded-lg">
+                                            <select name="genre" class="text-base text-gray-800 outline-none border-2 py-2 rounded-lg">
                                                 <option></option>
                                                 <option value="パス">パス</option>
                                                 <option value="スパイク">スパイク</option>

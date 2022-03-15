@@ -25,15 +25,35 @@
                                     </div>
                                     <div>
                                         <label for="genre" class="text-lx font-serif">ジャンル:</label>
-                                        <input type="text" placeholder="ジャンル" name="genre" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                                        <!-- <input type="text" placeholder="ジャンル" name="genre" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" /> -->
+                                        <select name="genre" placeholder="ジャンル" class="w-32 ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" >
+                                                <option></option>
+                                                <option value="パス">パス</option>
+                                                <option value="スパイク">スパイク</option>
+                                                <option value="レシーブ">レシーブ</option>
+                                                <option value="ゲーム">ゲーム</option>
+                                                <option value="トレーニング">トレーニング</option>
+                                        </select>
                                     </div>
                                     <div>
                                         <label for="people" class="text-lx font-serif">必用人数:</label>
-                                        <input type="text" placeholder="必用人数" name="people" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                                        <!-- <input type="text" placeholder="必用人数" name="people" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" /> -->
+                                        <select name="people" placeholder="人数" class="w-32 ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" >
+                                                <option></option>
+                                                @for($i=1;$i<=12;$i++)
+                                                <option value="{{$i}}">{{$i.'人'}}</option>
+                                                @endfor
+                                        </select>
                                     </div>
                                     <div>
                                         <label for="time" class="text-lx font-serif">所要時間:</label>
-                                        <input type="text" placeholder="所要時間" name="time" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                                        <!-- <input type="text" placeholder="所要時間" name="time" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" /> -->
+                                        <select name="time" placeholder="人数" class="w-32 ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" >
+                                                <option></option>
+                                                @for($i=1;$i<=15;$i++)
+                                                <option value="{{$i}}">{{$i.'分'}}</option>
+                                                @endfor
+                                        </select>
                                     </div>
                                     <button class="  px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">投稿</button>
                                 </div>
