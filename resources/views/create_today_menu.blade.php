@@ -41,7 +41,7 @@
                                                     <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                                                         <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$create[0]['pra_name']}}</td>
                                                         <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">{{$create[0]['pra_genre']}}</td>
-                                                        <td class="overflow-hidden py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$create[0]['pra_content']}}</td>
+                                                        <td class="break-words whitespace-pre py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$create[0]['pra_content']}}</td>
                                                         <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
                                                             <a class="text-blue-600 dark:text-blue-500 hover:underline" href="/menu_card/{{$create[0]['menu_id']}}">詳細</a>
                                                         </td>
