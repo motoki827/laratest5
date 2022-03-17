@@ -54,6 +54,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <form action="/sample" method="get">
+                                <button class="my-4 bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">PDFを生成</button>
+                            </form>
 
                     </ul>
                 </div>

@@ -82,5 +82,10 @@ return array (
     'normal' => $fontDir . '/migmix_normal_d8031d7d182dd4adc983e7a049d104ce',
     'bold' => $fontDir . '/migmix_bold_d8031d7d182dd4adc983e7a049d104ce',
   ),
+  'nunito' => array(
+    'normal' => $fontDir . '/nunito_normal_a194e99e1d2940105689ddf62703f783',
+    '600' => $fontDir . '/nunito_600_603d729cd461202f887785cdddf12a90',
+    'bold' => $fontDir . '/nunito_bold_d006afa317b43f5666267b85adb86b84',
+  ),
 );
 }; ?>
