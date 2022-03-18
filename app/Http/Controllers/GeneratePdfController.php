@@ -9,9 +9,13 @@ use PDF;
 class GeneratePdfController extends Controller
 {
     //
-    public function generate_pdf()
+    public function generate_pdf(Request $request)
     {   
-        $pdf = PDF::loadView('create_today_menu');
-        return $pdf->download('create_today_menu');
+        // $creates = $request->input();
+        // dd($creates);
+        $values = $request->session()->get('creates');
+        dd($values);
+        $pdf = PDF::loadView('generate_pdf',compact('values'));
+        return $pdf->download('generate_pdf');
     }
 }

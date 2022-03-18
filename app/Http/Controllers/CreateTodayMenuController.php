@@ -17,14 +17,14 @@ class CreateTodayMenuController extends Controller
         //var_dump($menus);
         //dd($menus);
 
-        // $creates = array();
+        //$creates = array();
        foreach($menu_ids as $menu_id){
             $creates[] =PracticeMenu::where('menu_id', $menu_id)->get(); 
         };
         //dd($creates);
         //$length = count($creates);
         //dd($length);
-
+        //$request->session()->push('creates', $creates);
         return view('create_today_menu',compact("creates"));
     
     }
