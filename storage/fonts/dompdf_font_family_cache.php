@@ -87,5 +87,9 @@ return array (
     '600' => $fontDir . '/nunito_600_603d729cd461202f887785cdddf12a90',
     'bold' => $fontDir . '/nunito_bold_d006afa317b43f5666267b85adb86b84',
   ),
+  'ipag' => array(
+    'normal' => $fontDir . '/ipag_normal_d8031d7d182dd4adc983e7a049d104ce',
+    'bold' => $fontDir . '/ipag_bold_d8031d7d182dd4adc983e7a049d104ce',
+  ),
 );
 }; ?>

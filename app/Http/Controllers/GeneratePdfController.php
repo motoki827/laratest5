@@ -13,8 +13,12 @@ class GeneratePdfController extends Controller
     {   
         // $creates = $request->input();
         // dd($creates);
+
+        //セッションに保存されている変数を受け取る
         $values = $request->session()->get('creates');
-        dd($values);
+        $values=$values[0];
+        //dd($values);
+        //ｐｄｆを出力
         $pdf = PDF::loadView('generate_pdf',compact('values'));
         return $pdf->download('generate_pdf');
     }
