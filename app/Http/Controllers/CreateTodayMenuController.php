@@ -24,7 +24,7 @@ class CreateTodayMenuController extends Controller
         //dd($creates);
         //$length = count($creates);
         //dd($length);
-        
+
         //pdfを作成するので変数を保持させる
         $request->session()->push('creates',$creates);
         return view('create_today_menu',compact("creates"));

@@ -21,5 +21,6 @@ class GeneratePdfController extends Controller
         //ｐｄｆを出力
         $pdf = PDF::loadView('generate_pdf',compact('values'));
         return $pdf->download('generate_pdf');
+         $request->session()->flush();
     }
 }
