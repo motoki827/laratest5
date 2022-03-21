@@ -20,7 +20,8 @@ class GeneratePdfController extends Controller
         //dd($values);
         //ｐｄｆを出力
         $pdf = PDF::loadView('generate_pdf',compact('values'));
+        //dd($pdf);
+        $request->session()->forget('creates');
         return $pdf->download('generate_pdf');
-         $request->session()->flush();
     }
 }
