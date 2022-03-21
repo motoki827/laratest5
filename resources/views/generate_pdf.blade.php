@@ -18,6 +18,21 @@
         body {
             font-family: ipag !important;
         }
+
+        @page {
+            margin:20px;
+        }
+
+        tr th{
+                background: #87cefa;
+                padding: 5px;
+                border: 1px solid #000;
+            }
+            
+        tr td{
+                padding: 5px;
+                border: 1px solid #000;
+            }
     </style>
 </head>
 <body>
