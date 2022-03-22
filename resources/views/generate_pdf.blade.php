@@ -32,6 +32,14 @@
         tr td{
                 padding: 5px;
                 border: 1px solid #000;
+                
+                /* vendor\dompdf\dompdf\src\FrameReflower\Text.php の45行目を変更すると、
+                改行を指定できるようになる */
+                /* white-space: nowrap; */
+
+                /* 折り返し表示 */
+                word-wrap : break-word;
+                overflow-wrap : break-word;
             }
     </style>
 </head>
@@ -61,9 +69,6 @@
                                                         <th scope="col" class="w-2/5 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                                             内容
                                                         </th>
-                                                        <th scope="col" class="w-1/5 p-4">
-                                                            <span class="sr-only">詳細</span>
-                                                        </th>
                                                     </tr>
                                                 </thead>
                                                 @foreach($values as $value)
@@ -72,9 +77,6 @@
                                                         <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$value[0]['pra_name']}}</td>
                                                         <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">{{$value[0]['pra_genre']}}</td>
                                                         <td class="break-words whitespace-pre py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$value[0]['pra_content']}}</td>
-                                                        <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                                            <a class="text-blue-600 dark:text-blue-500 hover:underline" href="/menu_card/{{$value[0]['menu_id']}}">詳細</a>
-                                                        </td>
                                                     </tr>
                                                 </tbody>
                                                 @endforeach
