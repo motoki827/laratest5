@@ -13,6 +13,8 @@
                         <div class="bg-indigo-50 min-h-screen md:px-20 pt-6">
                             <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto">
                                 <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">メニュー作成</h1>
+                                <x-auth-validation-errors class='mb-4' :errors='$errors'/>
+                               
                                 <div class="space-y-4">
                                     <input type="hidden" name="contri_id" value="{{$user['id']}}">
                                     <div>

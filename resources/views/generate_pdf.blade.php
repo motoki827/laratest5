@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style type="text/css">
         @font-face {
             font-family: ipag;
@@ -9,82 +10,75 @@
             font-weight: normal;
             src: url('{{ storage_path("fonts/ipag.ttf") }}') format('truetype');
         }
+
         @font-face {
             font-family: ipag;
             font-style: bold;
             font-weight: bold;
             src: url("{{ storage_path('fonts/ipag.ttf') }}") format('truetype');
         }
+
         body {
             font-family: ipag !important;
         }
 
         @page {
-            margin:20px;
+            margin: 20px;
         }
 
-        tr th{
-                background: #87cefa;
-                padding: 5px;
-                border: 1px solid #000;
-            }
-            
-        tr td{
-                padding: 5px;
-                border: 1px solid #000;
-                
-                /* vendor\dompdf\dompdf\src\FrameReflower\Text.php の45行目を変更すると、
-                改行を指定できるようになる */
-                /* white-space: nowrap; */
+        tr th {
+            background: #87cefa;
+            padding: 5px;
+            border: 1px solid #000;
+        }
 
-                /* 折り返し表示 */
-                word-wrap : break-word;
-                overflow-wrap : break-word;
-            }
+        tr td {
+            padding: 5px;
+            border: 1px solid #000;
+
+            /* vendor\dompdf\dompdf\src\FrameReflower\Text.php の45行目を変更すると、
+                改行を指定できるようになる */
+            /* white-space: nowrap; */
+
+            /* 折り返し表示 */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .genre {
+            width:80px;
+        }
     </style>
 </head>
-<body>
-    <div class="py-6">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <!-- Creacte By Joker Banny -->
 
-            
-                        <!-- This is an example component -->
-                        <div class="max-w-7xl mx-auto">
-                            <div class="flex flex-col">
-                                <div class="overflow-hidden shadow-md sm:rounded-lg">
-                                    <div class="inline-block min-w-full align-middle">
-                                        <div class="">
-                                            <table class="w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
-                                                <thead class="bg-gray-100 dark:bg-gray-700">
-                                                    <tr>
-                                                        <th scope="col" class="w-1/5 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                                            メニュー名
-                                                        </th>
-                                                        <th scope="col" class="w-1/5 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                                            ジャンル
-                                                        </th>
-                                                        <th scope="col" class="w-2/5 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                                            内容
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                @foreach($values as $value)
-                                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
-                                                    <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                        <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$value[0]['pra_name']}}</td>
-                                                        <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">{{$value[0]['pra_genre']}}</td>
-                                                        <td class="break-words whitespace-pre py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$value[0]['pra_content']}}</td>
-                                                    </tr>
-                                                </tbody>
-                                                @endforeach
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<body>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" class="menu_name">
+                        メニュー名
+                    </th>
+                    <th scope="col" class="genre">
+                        ジャンル
+                    </th>
+                    <th scope="col" class="contents">
+                        内容
+                    </th>
+                </tr>
+            </thead>
+            @foreach($values as $value)
+            <tbody>
+                <tr>
+                    <td>{{$value[0]['pra_name']}}</td>
+                    <td>{{$value[0]['pra_genre']}}</td>
+                    <td>{{$value[0]['pra_content']}}</td>
+                </tr>
+            </tbody>
+            @endforeach
+        </table>
+    </div>
 </body>
 
 </html>

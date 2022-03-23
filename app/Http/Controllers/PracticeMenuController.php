@@ -37,6 +37,13 @@ class PracticeMenuController extends Controller
      */
     public function store(Request $request)
     {
+        // $inputs=$request->validate([
+        //     'pra_name' => 'required|max:255',
+        //     'pra_content' => 'required|max:1500',
+        //     'pra_genre' => 'required',
+        //     'num_of_people' => 'required',
+        //     'time_requ' => 'required'
+        // ]);
 
         $data = $request->all();
         // dd($data);
@@ -52,7 +59,7 @@ class PracticeMenuController extends Controller
         ]);
 
         //リダイレクト処理
-        return redirect()->route('myPage');
+        return redirect()->route('myPage')->with('message','メニューが投稿されました');
     }
 
     /**

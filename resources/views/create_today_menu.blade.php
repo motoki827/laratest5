@@ -36,7 +36,7 @@
                                                     </tr>
                                                 </thead>
                                                 @foreach($creates as $create)
-                                                
+
                                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
                                                     <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                                                         <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$create[0]['pra_name']}}</td>
@@ -47,7 +47,7 @@
                                                         </td>
                                                     </tr>
                                                 </tbody>
-                                             
+
                                                 @endforeach
                                             </table>
                                         </div>
@@ -55,10 +55,10 @@
                                 </div>
                             </div>
                             <form action="/sample" method="get">
-                                {{-- <input type="hidden" value="{{$creates}}">  --}}
+                                {{-- <input type="hidden" value="{{$creates}}"> --}}
                                 <button class="my-4 bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">PDFを生成</button>
                             </form>
-
+                        </div>
                     </ul>
                 </div>
             </div>
