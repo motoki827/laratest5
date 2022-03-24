@@ -19,11 +19,11 @@
                                     <input type="hidden" name="contri_id" value="{{$user['id']}}">
                                     <div>
                                         <label for="title" class="text-lx font-serif">タイトル:</label>
-                                        <input type="text" placeholder="タイトル" name="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                                        <input type="text" placeholder="タイトル" value="{{old('title')}}" name="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                                     </div>
                                     <div>
                                         <label for="content" class="block mb-2 text-lg font-serif">内容:</label>
-                                        <textarea name="content" cols="30" rows="10" placeholder="練習の内容を書いてください.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
+                                        <textarea name="content" cols="30" rows="10" placeholder="練習の内容を書いてください.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md">{{old('content')}}</textarea>
                                     </div>
                                     <div>
                                         <label for="genre" class="text-lx font-serif">ジャンル:</label>
