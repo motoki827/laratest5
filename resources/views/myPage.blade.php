@@ -70,16 +70,17 @@
                         <div class="container mx-auto my-5 p-5">
                             <div class="md:flex no-wrap md:-mx-2 ">
                                 <!-- Left Side -->
-                                <div class="w-full md:w-3/12 md:mx-2">
+                                <div class=" md:w-3/12 md:mx-2">
                                     <!-- Profile Card -->
-                                    <div class="bg-white p-3 border-t-4 border-green-400">
-                                        <div class="image overflow-hidden">
-                                            <img class="h-auto w-full mx-auto " src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+                                    <div class="flex md:block bg-white p-3 border-t-4 border-green-400">
+                                        <div class="image overflow-hidden w-1/4 md:w-full">
+                                            <img class="h-auto  md:w-full mx-auto " src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
                                         </div>
-                                        <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">{{$user['name']}}</h1>
-                                        <h3 class="text-gray-600 font-lg text-semibold leading-6">コメント</h3>
-                                        <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">コメント</p>
-  
+                                        <div class="mx-4">
+                                            <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">{{$user['name']}}</h1>
+                                            <h3 class="text-gray-600 font-lg text-semibold leading-6">コメント</h3>
+                                            <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">コメント</p>
+                                        </div>
                                     </div>
                             
                                     <!-- End of profile card -->
