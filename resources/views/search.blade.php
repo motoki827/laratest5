@@ -35,7 +35,7 @@
                                                 <option value="レシーブ">レシーブ</option>
                                                 <option value="ゲーム">ゲーム</option>
                                                 <option value="トレーニング">トレーニング</option>
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<option value="サーブ">サーブ</option>
+                                                <option value="サーブ">サーブ</option>
                                             </select>
                                             <button class="bg-indigo-500 text-white text-base rounded-lg px-4 py-2 font-thin">検索</button>
                                         </div>
