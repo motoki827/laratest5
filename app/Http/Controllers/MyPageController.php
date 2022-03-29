@@ -13,7 +13,7 @@ class MyPageController extends Controller
     public function myPage()
     {
         $user = \Auth::user();
-
+        //dd($user);
         //↓モデル名
         $practices = PracticeMenu::where('contri_id', $user['id'])->where('status', '1')->get();
         //dd($practices);

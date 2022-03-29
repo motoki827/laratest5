@@ -36,5 +36,7 @@ Route::get('/store_card/{id}', [App\Http\Controllers\MenuCardController::class, 
 Route::post('/search_result', [App\Http\Controllers\SearchController::class, 'search_result'])->name('search_result');
 Route::post('/create_today_menu', [App\Http\Controllers\CreateTodayMenuController::class, 'create_today_menu'])->name('create_today_menu');
 Route::get('/sample', [App\Http\Controllers\GeneratePdfController::class, 'generate_pdf']);
+Route::get('/profile_card_edit', [App\Http\Controllers\ProfileCardEditController::class, 'profile_card_edit'])->name('profile_card_edit');
+Route::post('/update_profile/{id}', [App\Http\Controllers\ProfileCardEditController::class, 'update'])->name('update');
 
 require __DIR__ . '/auth.php';
