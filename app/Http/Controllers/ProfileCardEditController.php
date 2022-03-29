@@ -14,10 +14,13 @@ class ProfileCardEditController extends Controller
         return view('profile_card_edit', compact('user'));
     }
 
-    public function update(Request $request, $id)
+    public function update_profile(Request $request, $id)
     {
         //
-        $inputs = $request->all();
+        $inputs=$request->validate([
+            'image' => 'image|max:2048'
+        ]);
+
         $image = $request->file('image');
         //dd($inputs);
         if($request->hasFile('image')){
@@ -28,7 +31,7 @@ class ProfileCardEditController extends Controller
         }
 
         DB::table('users')->where('id', $id)->update([
-            'image_name' => $path
+            'image_name' => $path[1]
         ]);
 
         return redirect()->route('myPage')->with('message','プロフィールが更新されました');

@@ -22,6 +22,7 @@
                                         <label for="genre" class="text-lx font-serif">プロフィール画像:</label>
                                         <input type="file" name="image" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                                     </div>
+                                    <x-auth-validation-errors class='mb-4' :errors='$errors'/>
                                     <!-- <div>
                                         <label for="content" class="block mb-2 text-lg font-serif">コメント:</label>
                                         <textarea name="content" cols="30" rows="10" placeholder="コメントを書いてください.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
