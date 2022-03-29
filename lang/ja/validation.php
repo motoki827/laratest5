@@ -138,6 +138,7 @@ return [
         'content'=>'内容',
         'genre'=>'ジャンル',
         'people'=>'必用人数',
-        'time'=>'所要時間'
+        'time'=>'所要時間',
+        'image'=>'画像'
     ],
 ];
