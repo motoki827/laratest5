@@ -18,7 +18,7 @@ class ProfileCardEditController extends Controller
     {
         //
         $inputs=$request->validate([
-            'image' => 'image|max:8000'
+            'image' => 'required|image|max:8000'
         ]);
 
         $image = $request->file('image');
