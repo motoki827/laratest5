@@ -67,6 +67,6 @@ class MenuCardController extends Controller
 
         FavoriteMenu::where('menu_id', $id)->delete();
 
-        return redirect()->route('myPage');
+        return redirect()->route('myPage')->with('message','お気に入りから削除しました');;
     }
 }
