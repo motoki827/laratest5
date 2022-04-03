@@ -10,8 +10,19 @@
                 <div class="p-6 bg-white border-b border-gray-200">
 
                     <div class="bg-indigo-50 min-h-screen md:px-20 pt-6">
-                        <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto">
-                            <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">{{$practice['pra_name']}}</h1>
+                        <div class=" bg-white rounded-md px-6 py-10 max-w-2xl">
+                                <form method="POST" action="{{ route('delete',['id'=>$practice['menu_id']]) }}" class="text-right">
+                                    @csrf
+                                    <button class="">
+                                        <svg class="h-8 w-8 text-blue-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+
+                                            <!-- fillで塗りつぶし -->
+                                            <path fill="#4299e1" d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
+                                        </svg>
+                                    </button>
+                                </form>
+                                <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">{{$practice['pra_name']}}</h1>
                             <div class="space-y-4">
                                 <input type="hidden" name="contri_id" value="{{$user['id']}}">
 

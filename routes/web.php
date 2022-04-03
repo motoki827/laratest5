@@ -38,5 +38,6 @@ Route::post('/create_today_menu', [App\Http\Controllers\CreateTodayMenuControlle
 Route::get('/sample', [App\Http\Controllers\GeneratePdfController::class, 'generate_pdf']);
 Route::get('/profile_card_edit', [App\Http\Controllers\ProfileCardEditController::class, 'profile_card_edit'])->name('profile_card_edit');
 Route::post('/update_profile/{id}', [App\Http\Controllers\ProfileCardEditController::class, 'update_profile'])->name('update_profile');
+Route::post('/good', [App\Http\Controllers\GoodController::class, 'good'])->name('good');
 
 require __DIR__ . '/auth.php';
