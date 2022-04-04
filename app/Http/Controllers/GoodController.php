@@ -24,7 +24,6 @@ class GoodController extends Controller
         }else{
             Good::where('user_id', $user['id'])->where('menu_id', $id)->delete();
         };
-        //リダイレクト処理
-        return redirect()->route('myPage');
+
     }
 }
