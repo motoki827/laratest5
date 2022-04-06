@@ -16,17 +16,13 @@
                                 <div class="space-y-4">
                                     <input type="hidden" name="contri_id" value="{{$user['id']}}">
                                     <div>
-                                        <p name="name" class=" ml-2 outline-none py-1 px-2 text-md rounded-md">氏名:  {{$user['name']}}</p>
+                                        <p name="name" class=" ml-2 outline-none py-1 px-2 text-md rounded-md">氏名: {{$user['name']}}</p>
                                     </div>
                                     <div>
                                         <label for="genre" class="text-lx font-serif">プロフィール画像:</label>
                                         <input type="file" name="image" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                                     </div>
-                                    <x-auth-validation-errors class='mb-4' :errors='$errors'/>
-                                    <!-- <div>
-                                        <label for="content" class="block mb-2 text-lg font-serif">コメント:</label>
-                                        <textarea name="content" cols="30" rows="10" placeholder="コメントを書いてください.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
-                                    </div> -->
+                                    <x-auth-validation-errors class='mb-4' :errors='$errors' />
                                     <button class=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600">更新</button>
                                     <button class="  px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  "><a href="/myPage">マイページへ戻る</a></button>
                                 </div>
