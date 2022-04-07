@@ -14,12 +14,11 @@
                             <div id="app">
                                 <form method="POST" action="/good/{{$practice['menu_id']}}" class="text-right" id="AjaxForm">
                                     @csrf
-                                    <button class="button">
+                                    <button class="button" onclick="window.location.reload();">
                                         <svg class="h-8 w-8 text-blue-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" />
                                             <!-- fillで塗りつぶし -->
-                                            <path id="iine" fill="none" d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
-                                            <!-- <path fill="#4299e1" d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" /> -->
+                                            <path id="iine" fill="{{$fill}}" d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
                                         </svg>
                                     </button>
                                 </form>
@@ -64,51 +63,53 @@
         //画面遷移なしのform送信処理
 
         $('#AjaxForm').submit(function(event) {
-                    // HTMLでの送信をキャンセル
-                    event.preventDefault();
-                    var $form = $(this);
-                    var $button = $form.find('.submit');
-                    $.ajax({
-                        url: $form.attr('action'),
-                        type: $form.attr('method'),
-                        data: $form.serialize(),
-                        timeout: 10000, // 単位はミリ秒
-                        // 送信前
-                        beforeSend: function(xhr, settings) {
-                            // ボタンを無効化し、二重送信を防止
-                            $button.attr('disabled', true);
-                        },
-                        // 応答後
-                        complete: function(xhr, textStatus) {
-                            // ボタンを有効化し、再送信を許可
-                            $button.attr('disabled', false);
-                        },
-                        // 通信成功時の処理
-                        success: function(result, textStatus, xhr) {
-                            // 入力値を初期化
-                            $form[0].reset();
-                            $("#result").append(result);
-                        },
-                        // 通信失敗時の処理
-                        error: function(xhr, textStatus, error) {
-                            alert('NG...');
-                        },
-                    });
-                    // …
-                });
-                
-                if($('#iine').attr('fill') !== 'none'){
-                    $(function() {
-                        $(".button").click(function() {
-                            $('#iine').attr('fill', 'none');
-                        })
-                    });
-                }else{
-                    $(function() {
-                        $(".button").click(function() {
-                            $('#iine').attr('fill', '#4299e1');
-                        })
-                    });
-                }
+            // HTMLでの送信をキャンセル
+            event.preventDefault();
+            var $form = $(this);
+            var $button = $form.find('.submit');
+            $.ajax({
+                url: $form.attr('action'),
+                type: $form.attr('method'),
+                data: $form.serialize(),
+                timeout: 10000, // 単位はミリ秒
+                // 送信前
+                beforeSend: function(xhr, settings) {
+                    // ボタンを無効化し、二重送信を防止
+                    $button.attr('disabled', true);
+                },
+                // 応答後
+                complete: function(xhr, textStatus) {
+                    // ボタンを有効化し、再送信を許可
+                    $button.attr('disabled', false);
+                },
+                // 通信成功時の処理
+                success: function(result, textStatus, xhr) {
+                    // 入力値を初期化
+                    $form[0].reset();
+                    $("#result").append(result);
+                },
+                // 通信失敗時の処理
+                error: function(xhr, textStatus, error) {
+                    alert('NG...');
+                },
+            });
+            // …
+        });
+
+        if ($('#iine').attr('fill') !== 'none') {
+            $(function() {
+                $(".button").click(function() {
+                    $('#iine').attr('fill', 'none');
+                })
+            });
+        } else {
+            $(function() {
+                $(".button").click(function() {
+                    $('#iine').attr('fill', '#4299e1');
+                })
+            });
+        }
+
+   
     </script>
 </x-app-layout>

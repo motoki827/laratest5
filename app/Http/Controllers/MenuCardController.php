@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\PracticeMenu;
 use App\Models\FavoriteMenu;
+use App\Models\Good;
 
 class MenuCardController extends Controller
 {
@@ -17,7 +18,15 @@ class MenuCardController extends Controller
             ->first();
         //dd($practice);
 
-        return view('menu_card', compact('user', 'practice'));
+        //ログインしているユーザーidと表示されているメニューidが両方当てはまるレコードを取得
+        $good = Good::where('user_id', $user['id'])->where('menu_id', $id)->get()->toArray();
+        if (empty($good)){
+            $fill='none';
+        }else{
+           $fill='#4299e1';
+        };
+
+        return view('menu_card', compact('user', 'practice','fill'));
     }
 
     public function favorite_menu_card($id)
@@ -69,4 +78,5 @@ class MenuCardController extends Controller
 
         return redirect()->route('myPage')->with('message','お気に入りから削除しました');;
     }
+
 }
