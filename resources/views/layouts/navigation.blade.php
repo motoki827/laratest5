@@ -15,17 +15,17 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('myPage')" :active="request()->routeIs('dashboard')">
-                        {{ __('myPage') }}
+                        {{ __('マイページ') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('create_menu')" :active="request()->routeIs('dashboard')">
-                        {{ __('create_menu') }}
+                        {{ __('メニュー作成') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('search')" :active="request()->routeIs('dashboard')">
-                        {{ __('search') }}
+                        {{ __('検索') }}
                     </x-nav-link>
                 </div>
             </div>

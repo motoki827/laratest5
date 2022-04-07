@@ -20,6 +20,7 @@ class MenuCardController extends Controller
 
         //ログインしているユーザーidと表示されているメニューidが両方当てはまるレコードを取得
         $good = Good::where('user_id', $user['id'])->where('menu_id', $id)->get()->toArray();
+        //goodtableにレコードがなければ色なしあれば色付きにする
         if (empty($good)){
             $fill='none';
         }else{
@@ -64,7 +65,7 @@ class MenuCardController extends Controller
             ]);
         };
         //リダイレクト処理
-        return redirect()->route('myPage');
+        return redirect()->route('myPage')->with('message','お気に入りに追加しました');
     }
 
     public function delete(Request $request, $id)
@@ -76,7 +77,7 @@ class MenuCardController extends Controller
 
         FavoriteMenu::where('menu_id', $id)->delete();
 
-        return redirect()->route('myPage')->with('message','お気に入りから削除しました');;
+        return redirect()->route('myPage')->with('message','お気に入りから削除しました');
     }
 
 }

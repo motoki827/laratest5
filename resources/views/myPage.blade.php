@@ -15,7 +15,7 @@
                         <div class="w-full text-white bg-blue-500">
                             <div x-data="{ open: false }" class="flex max-w-screen-xl px-4 mx-auto md:items-center justify-between flex-row md:px-6 lg:px-8">
                                 <div class="p-4 flex items-center justify-between">
-                                    <a href="#" class="md:text-lg text-sm font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline">マイページ</a>
+                                    <p href="#" class="md:text-lg text-sm font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline">マイページ</p>
                                 </div>
                                 <nav class="flex-grow pb-4 md:pb-0 flex justify-end">
                                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
@@ -30,8 +30,6 @@
                                             <div class="py-2 bg-white text-blue-800 text-sm rounded-sm border shadow-sm">
                                                 <a class="block px-4 py-2 mt-2 text-sm bg-white md:mt-0 focus:text-gray-900 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/profile_card_edit">プロフィールの編集</a>
                                                 <a class="block px-4 py-2 mt-2 text-sm bg-white md:mt-0 focus:text-gray-900 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Help</a>
-                                                <div class="border-b"></div>
-                                                <a class="block px-4 py-2 mt-2 text-sm bg-white md:mt-0 focus:text-gray-900 hover:bg-indigo-100 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Logout</a>
                                             </div>
                                         </div>
                                     </div>

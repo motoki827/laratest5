@@ -49,16 +49,19 @@
                                         <table class="w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
                                             <thead class="bg-gray-100 dark:bg-gray-700">
                                                 <tr>
-                                                    <th scope="col" class="w-1/5 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                    <th scope="col" class="w-2/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                                         メニュー名
                                                     </th>
-                                                    <th scope="col" class="w-1/5 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                    <th scope="col" class="w-2/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                                         ジャンル
                                                     </th>
-                                                    <th scope="col" class="w-2/5 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                    <th scope="col" class="w-6/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                                         内容
                                                     </th>
-                                                    <th scope="col" class="w-1/5 p-4">
+                                                    <th scope="col" class="w-1/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                        
+                                                    </th>
+                                                    <th scope="col" class="w-1/12 p-4">
                                                         <span class="sr-only">詳細</span>
                                                     </th>
                                                 </tr>
@@ -69,6 +72,7 @@
                                                     <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$post['pra_name']}}</td>
                                                     <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">{{$post['pra_genre']}}</td>
                                                     <td class="overflow-hidden py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$post['pra_content']}}</td>
+                                                    <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white"></td>
                                                     <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
                                                         <a class="text-blue-600 dark:text-blue-500 hover:underline" href="/menu_card/{{$post['menu_id']}}">詳細</a>
                                                     </td>

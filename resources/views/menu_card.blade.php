@@ -14,11 +14,11 @@
                             <div id="app">
                                 <form method="POST" action="/good/{{$practice['menu_id']}}" class="text-right" id="AjaxForm">
                                     @csrf
-                                    <button class="button" onclick="window.location.reload();">
+                                    <button class="button">
                                         <svg class="h-8 w-8 text-blue-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" />
                                             <!-- fillで塗りつぶし -->
-                                            <path id="iine" fill="{{$fill}}" d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
+                                            <path id="good" fill="{{$fill}}" d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
                                         </svg>
                                     </button>
                                 </form>
@@ -96,16 +96,16 @@
             // …
         });
 
-        if ($('#iine').attr('fill') !== 'none') {
+        if ($('#good').attr('fill') !== 'none') {
             $(function() {
                 $(".button").click(function() {
-                    $('#iine').attr('fill', 'none');
+                    $('#good').attr('fill', 'none');
                 })
             });
         } else {
             $(function() {
                 $(".button").click(function() {
-                    $('#iine').attr('fill', '#4299e1');
+                    $('#good').attr('fill', '#4299e1');
                 })
             });
         }
