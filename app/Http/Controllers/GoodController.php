@@ -25,6 +25,7 @@ class GoodController extends Controller
             Good::where('user_id', $user['id'])->where('menu_id', $id)->delete();
         };
 
+        
 
     }
 }
