@@ -10,7 +10,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
 
                     <div class="bg-indigo-50 min-h-screen md:px-20 pt-6">
-                        <div class=" bg-white rounded-md px-6 py-10 max-w-2xl">
+                        <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto">
                             <form method="POST" action="/good/{{$practice['menu_id']}}" class="text-right" id="AjaxForm">
                                 @csrf
                                 <button class="button">
@@ -57,7 +57,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
     </script>
     <script>
-        //画面遷移なしのform送信処理
+        //ロード時にイベントリスナに登録
         window.onload = function(){
             if ($('#good').attr('fill') !== 'none') {
                 $(".button").click(function() {
@@ -69,6 +69,7 @@
                 })
             };
         };
+        //画面遷移なしのform送信処理
         $('#AjaxForm').submit(function(event) {
             // HTMLでの送信をキャンセル
                 event.preventDefault();
