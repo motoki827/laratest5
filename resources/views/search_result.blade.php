@@ -55,14 +55,14 @@
                                                     <th scope="col" class="sm:w-2/12 w-3/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                                         ジャンル
                                                     </th>
-                                                    <th scope="col" class="sm:sm:block hidden w-6/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                    <th scope="col" class=" w-5/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                                         内容
                                                     </th>
-                                                    <th scope="col" class="sm:w-1/12 w-2/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                    <th scope="col" class="sm:w-2/12 w-2/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                                                         いいね
                                                     </th>
-                                                    <th scope="col" class="sm:w-1/12 w-2/12 p-4">
-                                                        <span class="sr-only">詳細</span>
+                                                    <th scope="col" class="sm:w-1/12 w-2/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                                                   詳細
                                                     </th>
                                                 </tr>
                                             </thead>
@@ -71,16 +71,16 @@
                                                 <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                                                     <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$post['pra_name']}}</td>
                                                     <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">{{$post['pra_genre']}}</td>
-                                                    <td class="sm:inline hidden overflow-hidden py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$post['pra_content']}}</td>
+                                                    <td class="overflow-hidden py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$post['pra_content']}}</td>
                                                     <td class="flex py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
-                                                        <svg class="h-5 w-5 text-blue-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <svg class="inline h-5 w-5 text-blue-500" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                             <path stroke="none" d="M0 0h24v24H0z" />
                                                             <path d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
                                                         </svg>
                                                         <p>{{$post['goods']}}</p>
                                                     </td>
-                                                    <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                                        <a class="text-blue-600 dark:text-blue-500 hover:underline" href="/menu_card/{{$post['menu_id']}}">詳細</a>
+                                                    <td class="py-4 px-6 text-sm font-medium text-left ">
+                                                        <a class="text-sm font-medium text-left whitespace-nowrap text-blue-600 dark:text-blue-500 hover:underline" href="/menu_card/{{$post['menu_id']}}">詳細</a>
                                                     </td>
                                                 </tr>
                                             </tbody>

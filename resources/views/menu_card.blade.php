@@ -43,9 +43,9 @@
                                 </div>
                                 <form method="get" action="{{ route('store_card',['id'=>$practice['menu_id']]) }}">
                                     @csrf
-                                    <button class="  px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">お気に入りに追加</button>
+                                    <button class="px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">お気に入りに追加</button>
                                 </form>
-                                <button onclick=history.back() class="px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">検索結果一覧へ戻る</button>
+                                <button  onclick=history.back() class="px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">検索結果一覧へ戻る</button>
 
                             </div>
                         </div>
@@ -79,7 +79,6 @@
                     url: $form.attr('action'),
                     type: $form.attr('method'),
                     data: $form.serialize(),
-                    // timeout: 10000, // 単位はミリ秒
                     // 送信前
                     beforeSend: function(xhr, settings) {
                         // ボタンを無効化し、二重送信を防止
