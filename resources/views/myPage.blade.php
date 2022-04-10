@@ -71,7 +71,14 @@
                                                 <ul class="list-inside space-y-2">
                                                     @foreach($practices as $practice)
                                                     <li>
-                                                        <div class="text-teal-600"><a href="/menu_card_edit/{{$practice['menu_id']}}">{{$practice['pra_name']}}</a></div>
+                                                        <div class="text-teal-600 flex">
+                                                            <a href="/menu_card_edit/{{$practice['menu_id']}}">{{$practice['pra_name']}}</a>
+                                                            <svg class="inline h-5 w-5 text-blue-500 ml-4 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                                <path d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
+                                                            </svg>
+                                                            <p>{{$practice['goods']}}</p>
+                                                        </div>
                                                         <div class="text-gray-500 text-xs">{{$practice['updated_at']}}</div>
                                                     </li>
                                                     @endforeach

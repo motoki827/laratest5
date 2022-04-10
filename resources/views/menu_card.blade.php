@@ -79,6 +79,7 @@
                     url: $form.attr('action'),
                     type: $form.attr('method'),
                     data: $form.serialize(),
+                    timeout: 10000, // 単位はミリ秒
                     // 送信前
                     beforeSend: function(xhr, settings) {
                         // ボタンを無効化し、二重送信を防止

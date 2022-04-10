@@ -11,7 +11,7 @@
                     <form method="POST" action="/store">
                         @csrf
                        
-                            <div class=" bg-white rounded-md px-6 py-10 max-w-2xl mx-auto">
+                            <div class=" bg-white rounded-md px-6 py-10 max-w-3xl mx-auto">
                                 <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">メニュー作成</h1>
                                 <x-auth-validation-errors class='mb-4' :errors='$errors'/>
                                
