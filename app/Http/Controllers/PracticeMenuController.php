@@ -37,7 +37,7 @@ class PracticeMenuController extends Controller
      */
     public function store(Request $request)
     {
-        $inputs=$request->validate([
+        $inputs = $request->validate([
             'title' => 'required|max:255',
             'content' => 'required|max:1500',
             'genre' => 'required',
@@ -59,7 +59,7 @@ class PracticeMenuController extends Controller
         ]);
 
         //リダイレクト処理
-        return redirect()->route('myPage')->with('message','メニューが投稿されました');
+        return redirect()->route('myPage')->with('message', 'メニューが投稿されました');
     }
 
     /**
@@ -110,7 +110,7 @@ class PracticeMenuController extends Controller
             'time_requ' => $inputs['time']
         ]);
 
-        return redirect()->route('myPage')->with('message','メニューが更新されました');
+        return redirect()->route('myPage')->with('message', 'メニューが更新されました');
     }
 
     /**
@@ -125,6 +125,6 @@ class PracticeMenuController extends Controller
         PracticeMenu::where('menu_id', $id)->update([
             'status' => '0'
         ]);
-        return redirect()->route('myPage')->with('message','メニューが削除されました');
+        return redirect()->route('myPage')->with('message', 'メニューが削除されました');
     }
 }
