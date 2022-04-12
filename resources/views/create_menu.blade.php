@@ -43,7 +43,7 @@
                                         <select name="people" placeholder="人数" class="w-32 ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" >
                                                 <option></option>
                                                 @for($i=1;$i<=12;$i++)
-                                                <option value="{{$i}}">{{$i.'人'}}</option>
+                                                <option value="{{$i.'人'}}">{{$i.'人'}}</option>
                                                 @endfor
                                         </select>
                                     </div>
@@ -53,7 +53,7 @@
                                         <select name="time" placeholder="人数" class="w-32 ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" >
                                                 <option></option>
                                                 @for($i=1;$i<=15;$i++)
-                                                <option value="{{$i}}">{{$i.'分'}}</option>
+                                                <option value="{{$i.'分'}}">{{$i.'分'}}</option>
                                                 @endfor
                                         </select>
                                     </div>
