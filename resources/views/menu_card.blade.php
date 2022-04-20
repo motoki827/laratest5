@@ -45,8 +45,7 @@
                                     @csrf
                                     <button class="px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">お気に入りに追加</button>
                                 </form>
-                                <button  onclick=history.back() class="px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">検索結果一覧へ戻る</button>
-
+                                <button onclick=history.back() class="px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">検索結果一覧へ戻る</button>
                             </div>
                         </div>
                     </div>
@@ -58,7 +57,7 @@
     </script>
     <script>
         //ロード時にイベントリスナに登録
-        window.onload = function(){
+        window.onload = function() {
             if ($('#good').attr('fill') !== 'none') {
                 $(".button").click(function() {
                     $('#good').attr('fill', 'none');
@@ -72,44 +71,46 @@
         //画面遷移なしのform送信処理
         $('#AjaxForm').submit(function(event) {
             // HTMLでの送信をキャンセル
-                event.preventDefault();
-                var $form = $(this);
-                var $button = $form.find('.submit');
-                $.ajax({
-                    url: $form.attr('action'),
-                    type: $form.attr('method'),
-                    data: $form.serialize(),
-                    timeout: 10000, // 単位はミリ秒
-                    // 送信前
-                    beforeSend: function(xhr, settings) {
-                        // ボタンを無効化し、二重送信を防止
-                        $button.attr('disabled', true);
-                    },
-                    // 応答後
-                    complete: function(xhr, textStatus) {
-                        // ボタンを有効化し、再送信を許可
-                        $button.attr('disabled', false);
-                    },
-                    // 通信成功時の処理
-                    success: function(result, textStatus, xhr) {
-                        // 入力値を初期化
-                        $form[0].reset();
-                        $("#result").append(result);
-                    },
-                    // 通信失敗時の処理
-                    error: function(xhr, textStatus, error) {
-                        alert('NG...');
-                    },
-                });
-                if ($('#good').attr('fill') !== 'none') {
-                    $(".button").click(function() {
-                        $('#good').attr('fill', 'none');
-                    });
-                } else {
-                    $(".button").click(function() {
-                        $('#good').attr('fill', '#4299e1');
-                    })
-                };
+            event.preventDefault();
+            var $form = $(this);
+            var $button = $form.find('.submit');
+            $.ajax({
+                url: $form.attr('action'),
+                type: $form.attr('method'),
+                data: $form.serialize(),
+                timeout: 10000, // 単位はミリ秒
+                // 送信前
+                beforeSend: function(xhr, settings) {
+                    // ボタンを無効化し、二重送信を防止
+                    $button.attr('disabled', true);
+                },
+                // 応答後
+                complete: function(xhr, textStatus) {
+                    // ボタンを有効化し、再送信を許可
+                    $button.attr('disabled', false);
+                },
+                // 通信成功時の処理
+                success: function(result, textStatus, xhr) {
+                    // 入力値を初期化
+                    $form[0].reset();
+                    $("#result").append(result);
+                },
+                // 通信失敗時の処理
+                error: function(xhr, textStatus, error) {
+                    alert('NG...');
+                },
             });
-            </script>
+            if ($('#good').attr('fill') !== 'none') {
+                $(".button").click(function() {
+                    $('#good').attr('fill', 'none');
+                });
+            } else {
+                $(".button").click(function() {
+                    $('#good').attr('fill', '#4299e1');
+                })
+            };
+        });
+
+        
+    </script>
 </x-app-layout>
