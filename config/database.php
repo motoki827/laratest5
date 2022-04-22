@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Str;
 
-//$db = parse_url(env('DATABASE_URL'));
 $db = parse_url(env('DATABASE_URL'));
 return [
 
@@ -52,7 +51,7 @@ return [
             'port' => env('DB_PORT', '3306'),
             'database' =>ltrim($db["pass"],'/'),
             'username' => $db['user'],
-            'password' => $db['password'],
+            'password' => $db['pass'],
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
