@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->char('image_name',100)->after('email');
+            $table->char('image_name',100)->after('email')->nullable();
         });
     }
 
