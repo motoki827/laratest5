@@ -48,15 +48,9 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-<<<<<<< HEAD
-            'database' =>ltrim($db["path"],'/'),
-            'username' => $db['user'],
-            'password' => $db['pass'],
-=======
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
->>>>>>> d792c68e7c29a9d5a233ac22f6070c31e1fc1cec
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
