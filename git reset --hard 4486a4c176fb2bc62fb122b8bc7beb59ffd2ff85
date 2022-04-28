@@ -1,0 +1,252 @@
+[33mcommit d792c68e7c29a9d5a233ac22f6070c31e1fc1cec[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sat Apr 23 16:52:00 2022 +0900
+
+    heroku設定
+
+[33mcommit 468fd65dadf29dfeefe6ddec56bf4c461a8f3d1f[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Fri Apr 22 10:56:16 2022 +0900
+
+    ヘロク設定
+
+[33mcommit 699cfca946d3d7ac7b81e2344e955c3892c056b1[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Fri Apr 22 10:38:53 2022 +0900
+
+    heroku
+
+[33mcommit 6df2b7db29bdcf47aacd8b7377762fdfcba6fc55[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Thu Apr 21 11:07:04 2022 +0900
+
+    heroku設定
+
+[33mcommit 35e8c2f28fd6d4afb7e20fb4bfc9825566f10eeb[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Wed Apr 20 14:49:43 2022 +0900
+
+    heroku 設定
+
+[33mcommit c80817825ff1cdc8b4f925451f360200369c8254[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Wed Apr 20 14:09:11 2022 +0900
+
+    heroku設定
+
+[33mcommit 32a6d757840c12bbc26a2ae3babf2f8435649a48[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Tue Apr 12 10:26:53 2022 +0900
+
+    ｄｂの人数と時間を文字列に変更
+
+[33mcommit 98c1edf9f9ff4fdba5f47fbb5d0ecdfdc1ed61d8[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Mon Apr 11 08:04:41 2022 +0900
+
+    投稿履歴にいいね数表示
+
+[33mcommit de5b4084be794be552479ff0c9c3a4c6d71eefb3[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sun Apr 10 16:46:19 2022 +0900
+
+    検索結果にいいね数表示
+
+[33mcommit 51c852be0e3fb518f7971f652843d0bc3e39f2f7[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sun Apr 10 11:45:16 2022 +0900
+
+    いいね数をpractice_menutableに追加
+
+[33mcommit 7705f5372f4b043e5bde9815bcca577efc381b56[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sat Apr 9 11:04:47 2022 +0900
+
+    スタイル調整
+
+[33mcommit 22d02196a17cfa5e7b872c8f0d36c7cd55ccc75d[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Fri Apr 8 15:08:21 2022 +0900
+
+    いいねボタン完成
+
+[33mcommit 81bf2de53ca61ad42ce0d1522f322fa1a06597fb[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Thu Apr 7 15:35:19 2022 +0900
+
+    スタイル調整
+
+[33mcommit efa10ecf1295fbbc709ac59d2b5839b9552bedf6[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Thu Apr 7 09:54:40 2022 +0900
+
+    クリックでボタンの色変更を実装
+
+[33mcommit 9f47234480201d93e5c1225d8595ab1657204e9d[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Wed Apr 6 13:05:58 2022 +0900
+
+    クリックでいいねボタンの色変更　戻らない
+
+[33mcommit ce4a9fbc26647d353d30538e4cf902a206e1cbc1[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Wed Apr 6 11:25:17 2022 +0900
+
+    不要部分の削除
+
+[33mcommit b4cbf0adf27f19db82e66d89adf45df7b20089ee[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Mon Apr 4 16:43:52 2022 +0900
+
+    ajaxで画面遷移なしのいいね投稿
+
+[33mcommit 4376c5c3fe83a19b4970d6b5ca9937b1c4c5cdff[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Mon Apr 4 11:18:20 2022 +0900
+
+    いいねDBに保存＆削除機能追加
+
+[33mcommit fb6bc936987ddbc45b068762ad7de7c7b045e8f3[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sun Apr 3 19:23:34 2022 +0900
+
+    イイネボタン塗りつぶし
+
+[33mcommit 9caf6e303ebbabc20a8ae572cca930a7eb01e60d[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sat Apr 2 20:49:42 2022 +0900
+
+    イイネ関連ファイル生成
+
+[33mcommit 80387a8bbc7c51968792607ba14b7ec52e4a147a[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Fri Apr 1 09:00:49 2022 +0900
+
+    マイページスタイル調整
+
+[33mcommit adc7f3f214e821380c44bfae0349046501f8c090[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Fri Apr 1 07:30:36 2022 +0900
+
+    イメージを必須項目に設定
+
+[33mcommit 3d393d7c2c57bcd4895ba4665df5396b5bfb2b4b[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Thu Mar 31 09:16:33 2022 +0900
+
+    削除メッセージ表示
+
+[33mcommit ddbaf38dc69fc5a97cdebf4c7e0f3edadf241759[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Wed Mar 30 00:14:21 2022 +0900
+
+    レスポンシブ調整
+
+[33mcommit 4bd0189f4ece9add3032060fc6d3f29880f83dce[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Tue Mar 29 22:00:54 2022 +0900
+
+    プロフィール画像更新機能追加　バリデーションエラー表示
+
+[33mcommit 7568036042e1ded316926be4b15e65e3a9a87e91[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Tue Mar 29 16:10:46 2022 +0900
+
+    プロフィール編集画面追加
+
+[33mcommit 9fa5769166c8da9435d6e5f730d322ab57f1b2b2[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Tue Mar 29 14:21:50 2022 +0900
+
+    userstableにプロフィール画像名のカラムを追加
+
+[33mcommit 45a342d51279e0d4b127630ec2f1102a475d66e2[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Mon Mar 28 23:52:43 2022 +0900
+
+    セレクトの追加
+
+[33mcommit e51885cf1b00169a9d839fd56b5ebc8f0c8cde00[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Mon Mar 28 23:52:19 2022 +0900
+
+    セレクトの追加
+
+[33mcommit fd8dbcd21f141df3b1b980720460f27ea370a600[m
+Author: motoki827 <97792003+motoki827@users.noreply.github.com>
+Date:   Mon Mar 28 19:46:20 2022 +0900
+
+    Update search.blade.php
+    
+    選択項目追加
+
+[33mcommit 2b2aad553bf074de380cc41f8817619c7716f77a[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sun Mar 27 21:39:53 2022 +0900
+
+    検索ページ　レイアウト調整
+
+[33mcommit 856dd00378a418b6c4d9a6644391bec1fe6fc7a4[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sat Mar 26 20:58:48 2022 +0900
+
+    マイページレスポンシブ調整
+
+[33mcommit b50c2503f973cb25d366eff3b8c0ce34c532dbe0[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sat Mar 26 20:07:41 2022 +0900
+
+    ロゴ変更
+
+[33mcommit 53373557d013f4eded6e16c8ebdb80c3e46d5d28[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Fri Mar 25 00:10:08 2022 +0900
+
+    削除済みのメニューを検索結果に表示しない
+
+[33mcommit 83d5d82c1c92832be0f068a00f5fd404b7c0dc4d[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Thu Mar 24 10:45:08 2022 +0900
+
+    バリデーションエラー時の入力内容保持
+
+[33mcommit 963221966eb38488bfb7a053d617800c64f5cccd[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Wed Mar 23 21:38:13 2022 +0900
+
+    バリデーション機能追加
+
+[33mcommit 3e2d6b6c6365cc85e629cc20b72dac41b8318d32[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Wed Mar 23 20:51:53 2022 +0900
+
+    componentでメッセージ表示
+
+[33mcommit 64f8b37417e49d1c52f85a14977c293c901e6211[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Tue Mar 22 21:08:14 2022 +0900
+
+    vendorのdompdfを修正してpdfの文字折り返しを実装
+
+[33mcommit a983eaf02c8681e7ad63f9c7f64ad984cb22feba[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Mon Mar 21 22:11:42 2022 +0900
+
+    pdfのスタイル調整　
+
+[33mcommit 103d6e122dd1db0bd38ba74143c401dc165bee7e[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Mon Mar 21 17:22:12 2022 +0900
+
+    メニューのpdf化　session更新できた
+
+[33mcommit 6ac39c36e4cc5082462a6e2192c69a130d027155[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sun Mar 20 11:49:58 2022 +0900
+
+    メニューのPDF化　セッション　調整
+
+[33mcommit 7f7fedd223e697219309957149b27c9e9504f91f[m
+Author: motoki827 <motoki827@gmail.com>
+Date:   Sat Mar 19 16:01:40 2022 +0900
+
