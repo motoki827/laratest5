@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('practice_menus', function (Blueprint $table) {
             //
-            $table->char('image_name')->nullable()->change();
+            $table->string('num_of_people')->change();
+            $table->string('time_requ')->change();
+            
         });
     }
 
@@ -26,9 +28,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('practice_menus', function (Blueprint $table) {
             //
-            $table->char('image_name')->nullable(false)->change();
+            $table->integer('num_of_people')->change();
+            $table->integer('time_requ')->change();
         });
     }
 };
