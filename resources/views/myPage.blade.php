@@ -6,10 +6,10 @@
         <x-message :message="session('message')" />
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-5">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+            <div class="overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="border-b border-gray-200">
                     <div class="bg-gray-100">
                         <!-- ナビゲーションバー -->
                         <div class="w-full text-white bg-blue-500">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <!--ナビゲーションバー終わり-->
-                        <div class="container mx-auto my-5 p-5">
+                        <div class="container mx-auto my-5">
                             <div class="md:flex no-wrap md:-mx-2 ">
                                 <div class=" md:w-3/12 md:mx-2 lg:w-2/12">
                                     <!-- プロフィール -->
@@ -54,7 +54,7 @@
                                     <!-- プロフィール終わり -->
                                 </div>
                                 <!-- 投稿履歴とお気に入り表示 -->
-                                <div class="w-full md:w-9/12 mx-2 h-100">
+                                <div class="w-full md:w-9/12 h-100">
                                     <div class="bg-white p-3 shadow-sm rounded-sm mt-3 md:m-0 text-sm md:text-lg ">
                                         <div class="grid grid-cols-2">
                                             <div>
@@ -73,7 +73,7 @@
                                                     <li>
                                                         <div class="text-teal-600 flex">
                                                             <a href="/menu_card_edit/{{$practice['menu_id']}}">{{$practice['pra_name']}}</a>
-                                                            <svg class="inline h-5 w-5 text-blue-500 ml-4 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <svg class="inline h-5 w-5 text-blue-500 ml-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" />
                                                                 <path d="M7 11v 8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
                                                             </svg>
