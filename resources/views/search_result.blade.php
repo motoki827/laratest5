@@ -76,8 +76,8 @@
                                         </svg>
                                         <p>{{$post['goods']}}</p>
                                     </td>
-                                    <td class="py-4 px-6 text-sm font-medium text-left ">
-                                        <a class="text-sm font-medium text-left whitespace-nowrap text-blue-600 dark:text-blue-500 hover:underline" href="/menu_card/{{$post['menu_id']}}">詳細</a>
+                                    <td class="py-4 px-4 text-sm font-medium text-left">
+                                        <a class="text-sm font-medium whitespace-nowrap text-blue-600 dark:text-blue-500 hover:underline" href="/menu_card/{{$post['menu_id']}}">詳細</a>
                                     </td>
                                 </tr>
                             </tbody>
